@@ -1,0 +1,45 @@
+DEFAULTDELAY 30
+
+REM [#] This ducky scriptis used for development testing purposes only.
+
+WINDOWS r
+DELAY 500
+STRING notepad.exe
+DELAY 900
+ENTER
+STRING unoquack dev testing.
+DELETE
+CONTROL s
+DELAY 600
+STRING UnoQuack_test.txt
+ENTER
+ALT F4
+WINDOWS R
+STRING explorer.exe -Documents
+MENU
+STRING e
+APP
+STRING w
+STRING f
+STRING fucked
+ENTER
+GUI E
+ALT TAB
+GUI r
+STRING calc.exe
+ALT H
+ESC
+ALT F4
+ESCAPE
+ALT F4
+LEFT
+LEFTARROW
+RIGHT
+RIGHTARROW
+UP
+UPARROW
+DOWN
+DOWNARROW
+ALT F4
+
+REM [#] Github: CipherusPrime

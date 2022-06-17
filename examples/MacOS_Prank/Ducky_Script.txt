@@ -1,0 +1,14 @@
+REM [#] This script is used by UnoQuack as sample.
+REM Fake Apple Update
+
+GUI SPACE
+DELAY 300
+STRING safari
+ENTER
+DELAY 800
+STRING https://fakeupdate.net/apple/
+ENTER
+DELAY 600
+CTRL GUI f
+
+REM [#] Github: name-is-cipher

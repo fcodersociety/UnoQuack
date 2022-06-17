@@ -1,0 +1,196 @@
+// UnoQuack by CipherusPrime.
+
+#include <HIDKeyboard.h>
+HIDKeyboard keyboard;
+
+void setup() {
+	keyboard.begin();
+	delay(1000);
+}
+
+void loop() {
+
+	// [#] This ducky scriptis used for development testing purposes only.
+
+	keyboard.pressKey(GUI, 'r');
+	keyboard.releaseKey();
+
+	delay(300);
+
+	delay(500);
+
+	keyboard.print("notepad.exe");
+
+	delay(300);
+
+	delay(900);
+
+	keyboard.pressSpecialKey(ENTER);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.print("unoquack dev testing.");
+
+	delay(300);
+
+	keyboard.pressSpecialKey(DELETE);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressKey(CTRL, 's');
+	keyboard.releaseKey();
+
+	delay(300);
+
+	delay(600);
+
+	keyboard.print("UnoQuack_test.txt");
+
+	delay(300);
+
+	keyboard.pressSpecialKey(ENTER);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(ALT, F4);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressKey(GUI, 'r');
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.print("explorer.exe -Documents");
+
+	delay(300);
+
+	keyboard.pressSpecialKey(SHIFT, F10);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.print("e");
+
+	delay(300);
+
+	keyboard.pressSpecialKey(SHIFT, F10);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.print("w");
+
+	delay(300);
+
+	keyboard.print("f");
+
+	delay(300);
+
+	keyboard.print("fucked");
+
+	delay(300);
+
+	keyboard.pressSpecialKey(ENTER);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressKey(GUI, 'e');
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(ALT, TAB);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressKey(GUI, 'r');
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.print("calc.exe");
+
+	delay(300);
+
+	keyboard.pressKey(ALT, 'h');
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(ESCAPE);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(ALT, F4);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(ESCAPE);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(ALT, F4);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(LEFTARROW);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(LEFTARROW);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(RIGHTARROW);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(RIGHTARROW);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(UPARROW);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(UPARROW);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(DOWNARROW);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(DOWNARROW);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	keyboard.pressSpecialKey(ALT, F4);
+	keyboard.releaseKey();
+
+	delay(300);
+
+	// [#] Github: CipherusPrime
+
+	while(1);
+
+}

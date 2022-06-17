@@ -1,0 +1,11 @@
+REM [#] This script is used by UnoQuack as sample.
+REM Fake Linux Steam Update
+
+CTRL ALT t
+DELAY 1000
+STRING xdg-open https://fakeupdate.net/steam/
+ENTER
+DELAY 300
+F11
+
+REM [#] Github: name-is-cipher

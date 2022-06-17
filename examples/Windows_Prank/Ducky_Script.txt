@@ -1,0 +1,9 @@
+REM [#] This script is used by UnoQuack as sample.
+REM Fake Windows Update
+
+GUI r
+DELAY 500
+STRING iexplore -k http://fakeupdate.net/win10/index.html
+ENTER
+
+REM [#] Github: name-is-cipher
