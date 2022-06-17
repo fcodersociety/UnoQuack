@@ -1,0 +1,797 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+*::-moz-selection {
+  background-color: #019601;
+  color: white;
+}
+
+*::selection {
+  background-color: #019601;
+  color: white;
+}
+
+@font-face {
+  font-family: SFMono-Regular;
+  src: url(./fonts/SFMono-Regular.ttf);
+}
+
+@font-face {
+  font-family: UbuntuRegular;
+  src: url(./fonts/Ubuntu-Regular.ttf);
+}
+
+svg {
+  pointer-events: none;
+}
+
+.placeholder {
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  z-index: 99;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 4px;
+}
+
+html {
+  min-width: 500px;
+}
+
+body {
+  width: 100%;
+  height: auto;
+  background-color: #151515;
+  overflow: overlay;
+}
+
+header {
+  position: relative;
+  background-color: transparent;
+  width: 100%;
+  height: 105px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .site-logo {
+  position: absolute;
+  margin-left: 75px;
+  width: 120px;
+  height: 100%;
+  -webkit-transform: translateX(-20%);
+          transform: translateX(-20%);
+  background-color: transparent;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+header .site-logo img {
+  position: absolute;
+  padding: 10px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100%;
+  -webkit-filter: brightness(200%) contrast(100%) saturate(300%) drop-shadow(0 0 4px black);
+          filter: brightness(200%) contrast(100%) saturate(300%) drop-shadow(0 0 4px black);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+header .site-logo:hover img {
+  -webkit-filter: brightness(200%) contrast(100%) saturate(300%) drop-shadow(0 0 3px #00ff0055);
+          filter: brightness(200%) contrast(100%) saturate(300%) drop-shadow(0 0 3px #00ff0055);
+}
+
+header div {
+  position: relative;
+  margin: 0 auto 0 auto;
+  color: lime;
+  font-weight: bold;
+  white-space: pre;
+  font-stretch: expanded;
+  font-family: SFMono-Regular;
+}
+
+header .site-tag {
+  position: absolute;
+  bottom: 10px;
+  right: 70px;
+  font-size: 20px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+header .site-tag:hover {
+  text-shadow: 0 0 4px lime;
+}
+
+header .brand-logo {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+hr {
+  width: 97%;
+  opacity: 0.6;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+  margin: 0 auto 0 auto;
+}
+
+.main-section {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+}
+
+.input-section {
+  position: relative;
+  left: 0;
+  width: 50%;
+  min-height: 400px;
+  height: calc(100vh - 308px);
+}
+
+.input-section .cursor-area {
+  position: absolute;
+  height: 92%;
+  width: 90%;
+  top: 4%;
+  right: 2%;
+  left: auto;
+  padding: 12px;
+  border: 2px solid transparent;
+  overflow: overlay;
+  background-color: #353535;
+  border-radius: 5px;
+}
+
+.input-section #input {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  resize: none;
+  font-family: SFMono-Regular;
+  font-size: 16px;
+  outline: none;
+  color: white;
+  white-space: pre-wrap;
+}
+
+.input-section #input p {
+  display: inline;
+  white-space: pre-wrap;
+  color: red;
+}
+
+.input-section #input p::-moz-selection {
+  background-color: red;
+  color: white;
+}
+
+.input-section #input p::selection {
+  background-color: red;
+  color: white;
+}
+
+.input-section .paste-button {
+  position: absolute;
+  outline: none;
+  border: none;
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 5px;
+  top: 6%;
+  right: calc(7% + 60px);
+  width: 45px;
+  height: 45px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  z-index: 2;
+}
+
+.input-section .paste-button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 38px;
+  height: 38px;
+  fill: white;
+  margin: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.input-section .paste-button:hover {
+  background-color: #777777;
+}
+
+.input-section .paste-button:hover svg {
+  fill: white;
+}
+
+.input-section .paste-button:active {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  background-color: #777777;
+  border: 2px solid white;
+}
+
+.input-section .paste-button:active svg {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  fill: white;
+}
+
+.input-section .in-clear-button {
+  position: absolute;
+  outline: none;
+  border: none;
+  border: 2px solid transparent;
+  background-color: transparent;
+  padding: 4px;
+  border-radius: 5px;
+  top: 6%;
+  right: 7%;
+  width: 45px;
+  height: 45px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  z-index: 2;
+}
+
+.input-section .in-clear-button svg {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 20px;
+  height: 20px;
+  fill: white;
+  -webkit-transform: translate(52%, -48%);
+          transform: translate(52%, -48%);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.input-section .in-clear-button:hover {
+  background-color: #777777;
+}
+
+.input-section .in-clear-button:hover svg {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  fill: white;
+}
+
+.input-section .in-clear-button:active {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  background-color: #777777;
+  border: 2px solid white;
+}
+
+.input-section .in-clear-button:active svg {
+  fill: white;
+}
+
+.output-section {
+  position: relative;
+  right: 0;
+  width: 50%;
+  min-height: 400px;
+  height: calc(100vh - 308px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.output-section textarea {
+  position: absolute;
+  height: 92%;
+  width: 90%;
+  top: 4%;
+  left: 2%;
+  right: auto;
+  padding: 12px;
+  resize: none;
+  background-color: #353535 !important;
+  font-family: SFMono-Regular;
+  font-size: 16px;
+  overflow: overlay;
+  border-radius: 5px;
+  color: white;
+  border: 2px solid transparent !important;
+}
+
+.output-section textarea::-webkit-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.output-section textarea:-ms-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.output-section textarea::-ms-input-placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.output-section textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+
+.output-section .copy-button {
+  position: absolute;
+  outline: none;
+  border: none;
+  border: 2px solid transparent;
+  background-color: transparent;
+  border-radius: 5px;
+  top: 6%;
+  right: calc(13% + 60px);
+  width: 45px;
+  height: 45px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  z-index: 2;
+}
+
+.output-section .copy-button .noc {
+  position: absolute;
+  top: 50%;
+  right: 35%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-family: SFMono-Regular;
+  font-size: 16px;
+  opacity: 0;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  color: lime;
+}
+
+.output-section .copy-button .noc.yec {
+  opacity: 1;
+}
+
+.output-section .copy-button svg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 38px;
+  height: 38px;
+  fill: white;
+  margin: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.output-section .copy-button:hover {
+  background-color: #777777;
+}
+
+.output-section .copy-button:hover svg {
+  fill: white;
+}
+
+.output-section .copy-button:active {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  background-color: #777777;
+  border: 2px solid white;
+}
+
+.output-section .copy-button:active svg {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  fill: white;
+}
+
+.output-section .clear-button {
+  position: absolute;
+  outline: none;
+  border: none;
+  border: 2px solid transparent;
+  background-color: transparent;
+  padding: 4px;
+  border-radius: 5px;
+  top: 6%;
+  right: 13%;
+  width: 45px;
+  height: 45px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  z-index: 2;
+}
+
+.output-section .clear-button svg {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  width: 20px;
+  height: 20px;
+  fill: white;
+  -webkit-transform: translate(46%, -48%);
+          transform: translate(46%, -48%);
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.output-section .clear-button:hover {
+  background-color: #777777;
+}
+
+.output-section .clear-button:hover svg {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  fill: white;
+}
+
+.output-section .clear-button:active {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  background-color: #777777;
+  border: 2px solid white;
+}
+
+.output-section .clear-button:active svg {
+  fill: white;
+}
+
+.submit-area {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  bottom: 0;
+  width: 100%;
+  height: 200px;
+}
+
+.submit-area .terminal {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 90%;
+  width: 71%;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 4%;
+  background-color: #060606;
+  border: 1px solid transparent;
+  overflow: auto;
+  border-radius: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.submit-area .terminal .title-t {
+  color: white;
+  margin: 20px auto auto auto;
+  -webkit-transform: translateX(-5%);
+          transform: translateX(-5%);
+  font-family: SFMono-Regular;
+  color: lime;
+}
+
+.submit-area .terminal .title-t a {
+  color: lime;
+  text-shadow: 0 0 4px lime;
+  text-decoration: none;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.submit-area .terminal .title-t a:hover {
+  text-shadow: 0 0 4px #003200;
+}
+
+.submit-area .terminal .placeholder-t {
+  opacity: 1;
+  color: lime;
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 13%;
+  padding: 10px;
+  padding-bottom: 0px;
+  font-family: SFMono-Regular;
+  -webkit-transform: translateY(-18px);
+          transform: translateY(-18px);
+  white-space: pre;
+}
+
+.submit-area .terminal p {
+  padding: 10px;
+  padding-bottom: 0px;
+  font-family: SFMono-Regular;
+}
+
+.submit-area .terminal .success {
+  color: lime;
+}
+
+.submit-area .terminal .error {
+  color: red;
+}
+
+.submit-area .terminal .logo {
+  position: absolute;
+  bottom: 15px;
+  right: 30px;
+  font-family: SFMono-Regular;
+  color: lime;
+}
+
+.submit-area .submit-button {
+  position: absolute;
+  top: 25%;
+  left: 85%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  outline: none;
+  border: none;
+  width: 200px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  font-family: SFMono-Regular;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 19px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  opacity: 0.9;
+}
+
+.submit-area .submit-button svg {
+  width: 35px;
+  margin-right: 17px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.submit-area .submit-button:hover {
+  background-color: #666666;
+  color: white;
+}
+
+.submit-area .submit-button:hover svg {
+  fill: white;
+}
+
+.submit-area .submit-button:active {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  width: 197px;
+  height: 48px;
+}
+
+.submit-area .download-button {
+  position: absolute;
+  top: 64%;
+  left: 85%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  outline: none;
+  border: none;
+  width: 200px;
+  height: 50px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  font-family: SFMono-Regular;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 19px;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+  pointer-events: all;
+  opacity: 0.9;
+}
+
+.submit-area .download-button svg {
+  width: 30px;
+  margin-right: 19px;
+  fill: black;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+.submit-area .download-button:hover {
+  background-color: #666666;
+  color: white;
+}
+
+.submit-area .download-button:hover svg {
+  fill: white;
+}
+
+.submit-area .download-button:active {
+  -webkit-transition: all 0s;
+  transition: all 0s;
+  width: 197px;
+  height: 48px;
+}
+
+.submit-area .download-button.not {
+  border: 2px solid transparent;
+  color: #999999;
+  background-color: #dddddd;
+  pointer-events: none;
+}
+
+.submit-area .download-button.not svg {
+  fill: #999999;
+}
+
+.submit-area .download-button.not:hover {
+  background-color: transparent;
+}
+
+.submit-area .download-button.not:active {
+  width: 150px;
+  height: 50px;
+}
+
+.mobile-spacer {
+  display: none;
+}
+
+@media all and (max-width: 1195px) {
+  .site-tag {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .header .brand-logo {
+    margin: 0 calc(auto * 1.5) 0 calc(auto * 0.5) !important;
+    font-size: 14px !important;
+  }
+  .site-logo {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .main-section {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .input-section {
+    width: 100% !important;
+  }
+  .input-section .cursor-area {
+    left: 5%;
+    right: 5%;
+  }
+  .output-section {
+    width: 100% !important;
+  }
+  .output-section textarea {
+    left: 5% !important;
+    right: 5% !important;
+  }
+  .output-section .copy-button {
+    right: calc(7% + 60px) !important;
+  }
+  .output-section .clear-button {
+    right: 7% !important;
+  }
+  .submit-area {
+    height: 240px !important;
+    padding-bottom: 100px !important;
+  }
+  .submit-area .terminal {
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+  }
+  .submit-area .terminal .title-t {
+    opacity: 0 !important;
+    pointer-events: none !important;
+  }
+  .submit-area .terminal .placeholder-t {
+    margin-left: 3% !important;
+  }
+  .submit-area .submit-button {
+    top: calc(25% + 180px) !important;
+    left: 25% !important;
+    right: 25% !important;
+    width: 50% !important;
+    height: 60px !important;
+    -webkit-transform: unset !important;
+            transform: unset !important;
+  }
+  .submit-area .download-button {
+    top: calc(64% + 180px) !important;
+    left: 25% !important;
+    right: 25% !important;
+    width: 50% !important;
+    width: 50% !important;
+    -webkit-transform: unset !important;
+            transform: unset !important;
+  }
+  .mobile-spacer {
+    position: relative;
+    margin-top: 180px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 10px;
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
