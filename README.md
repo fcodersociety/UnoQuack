@@ -24,7 +24,7 @@ Development in Progress ...
 **UnoQuack** is an easy DuckyScript to Arduino Uno payload converter.   
   
 ## Web converter - online 🌐 (Recommended)
-You can use UnoQuack by visiting the <a href="https://cipherusprime.github.io/UnoQuack/" target="_blank">converter website</a> .
+You can use UnoQuack by visiting the <a href="https://fcodersociety.github.io/UnoQuack/" target="_blank">converter website</a> .
 
 ## Python converter - Local 💻 or 📱
 
